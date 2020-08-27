@@ -2,7 +2,7 @@ import face_recognition
 import json
 import cv2
 
-image_url = "test.jpg"
+image_url = "test.jpeg"
 
 image = face_recognition.load_image_file(image_url)
 point_list = face_recognition.face_locations(image)
