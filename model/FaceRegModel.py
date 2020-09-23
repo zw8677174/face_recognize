@@ -1,5 +1,5 @@
 from peewee import *
-from .DBconfig import database
+from model.DBconfig import DatabaseConfig
 
 
 class UnknownField(object):
@@ -8,7 +8,7 @@ class UnknownField(object):
 
 class BaseModel(Model):
     class Meta:
-        database = database
+        database = DatabaseConfig.get_zpc_base()
 
 
 class FacePics(BaseModel):

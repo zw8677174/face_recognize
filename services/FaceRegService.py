@@ -2,11 +2,11 @@ import face_recognition
 import cv2
 from model.FaceRegModel import ImageUrl
 
-
 class FacePointService:
 
     @staticmethod
     def save(image_url):
+        # Log.debug(image_url)
         ImageUrl.create()
         pass
         # image = face_recognition.load_image_file(image_url)

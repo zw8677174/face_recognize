@@ -1,16 +1,13 @@
-from app import app
 import json
+from app import log
 
 
-class Log:
+def debug(content):
+    if content is str:
+        log.debug(content)
+    else:
+        log.debug(json.dumps(content))
 
-    @staticmethod
-    def debug(content):
-        if content is str:
-            app.logger.debug(content)
-        else:
-            app.logger.debug(json.dumps(content))
 
-    @staticmethod
-    def warning(content):
-        app.logger.debug(content)
+def warning(content):
+    log.debug(content)
